@@ -205,7 +205,7 @@ def morning_broadcast(buying_list):
     # 加上末尾分隔線
     final_recommendation_text += "\n###########\n\n"
     # 加上版權聲明
-    final_recommendation_text += f"JohnKuo © {YEAR} ({VERSION})"
+    # final_recommendation_text += f"JohnKuo © {YEAR} ({VERSION})"
     # 透過 LINE API 進行推播
     line_bot_api.broadcast(TextSendMessage(text=final_recommendation_text))
     return
@@ -351,7 +351,7 @@ def evening_broadcast(final_date, final_df, broadcast=True):
     # 加上資料來源說明
     final_recommendation_text += f"資料來源: 台股 {str(final_date)}"
     # 加上版權聲明
-    final_recommendation_text += f"\nJohnKuo © {YEAR} ({VERSION})"
+    # final_recommendation_text += f"\nJohnKuo © {YEAR} ({VERSION})"
     # 透過 LINE API 進行推播
     if broadcast:
         line_bot_api.broadcast(TextSendMessage(text=final_recommendation_text))
