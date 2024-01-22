@@ -388,7 +388,7 @@ def get_watching_list(date) -> pd.DataFrame:
     print("---------------------")
     print("核對 [2330 台積電] 今日交易資訊:")
     tsmc = df.loc["2330"]
-    for column, value in tsmc.iteritems():
+    for column, value in tsmc.items():
         if type(value) == list and len(value) > 0:
             print(f"{column}: {value[-1]} (history length={len(value)})")
         else:
